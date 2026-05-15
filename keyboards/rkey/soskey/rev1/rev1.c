@@ -17,14 +17,18 @@
 #include "quantum.h"
 
 #ifdef RGB_MATRIX_ENABLE
+
+#define CAPS_LED_INDEX      57
+#define DEL_LED_INDEX       13
+
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
+    if (host_keyboard_led_state().scroll_lock) {
+        RGB_MATRIX_INDICATOR_SET_COLOR(DEL_LED_INDEX, 0x00, 0xFF, 0x00);
+    }
+
     if (host_keyboard_led_state().caps_lock) {
-        for (uint8_t i = led_min; i <= led_max; i++) {
-            if (g_led_config.flags[i] & LED_FLAG_INDICATOR) {
-                rgb_matrix_set_color(i, RGB_RED);
-            }
-        }
+        RGB_MATRIX_INDICATOR_SET_COLOR(CAPS_LED_INDEX, 0xFF, 0x00, 0x00);
     }
 
     return true;

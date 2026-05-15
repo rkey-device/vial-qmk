@@ -1,6 +1,6 @@
 {
     "manufacturer": "rkey-device",
-    "keyboard_name": "rkey SosKey",
+    "keyboard_name": "SosKey",
     "maintainer": "rkey-device",
     "bootloader": "stm32-dfu",
     "diode_direction": "ROW2COL",
@@ -32,7 +32,7 @@
         }
     },
     "dynamic_keymap": {
-        "layer_count": 2
+        "layer_count": 3
     },
     "processor": "STM32F303",
     "usb": {
@@ -111,8 +111,15 @@
             "solid_multisplash": true
         },
         "default": {
-            "animation": "solid_color"
+            "animation": "cycle_left_right",
+            "hue": 0,
+            "sat": 255,
+            "speed": 128,
         },
+        "hue_steps": 5,
+        "sat_steps": 5,
+        "val_steps": 5,
+        "speed_steps": 5,
         "layout": [
             {"matrix": [0, 0], "x": 0, "y": 0, "flags": 1},
             {"matrix": [0, 1], "x": 15, "y": 0, "flags": 4},
@@ -127,7 +134,7 @@
             {"matrix": [0, 11], "x": 165, "y": 0, "flags": 4},
             {"matrix": [0, 12], "x": 180, "y": 0, "flags": 4},
             {"matrix": [0, 14], "x": 210, "y": 0, "flags": 4},
-            {"matrix": [0, 15], "x": 224, "y": 0, "flags": 1},
+            {"matrix": [0, 15], "x": 224, "y": 0, "flags": 9},
 
             {"matrix": [1, 15], "x": 224, "y": 13, "flags": 1},
             {"matrix": [1, 13], "x": 202, "y": 13, "flags": 1},
@@ -174,7 +181,7 @@
             {"matrix": [3, 4], "x": 56, "y": 39, "flags": 4},
             {"matrix": [3, 3], "x": 41, "y": 39, "flags": 4},
             {"matrix": [3, 2], "x": 26, "y": 39, "flags": 4},
-            {"matrix": [3, 0], "x": 6, "y": 39, "flags": 8},
+            {"matrix": [3, 0], "x": 6, "y": 39, "flags": 9},
 
             {"matrix": [4, 0], "x": 9, "y": 52, "flags": 1},
             {"matrix": [4, 2], "x": 34, "y": 52, "flags": 4},

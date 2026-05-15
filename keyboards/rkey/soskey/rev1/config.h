@@ -19,8 +19,6 @@
 #define WS2812_SPI_DRIVER                   SPID1
 #define WS2812_SPI_MOSI_PAL_MODE            5
 
-#define VIA_EEPROM_LAYOUT_OPTIONS_SIZE      2
-
 #define STM32_ONBOARD_EEPROM_SIZE           1024
 
 #ifdef AUDIO_ENABLE
